@@ -1,0 +1,33 @@
+<h1>Calc#action</h1>
+
+<%= form_tag({action: "action"}, method: "get") do %>
+<input type="hidden" id="calc" name="numbers" >
+<div class="container">
+  <div class="calculator">
+    <div class="keys">
+      <input id="display" class="readout" type="readonly" />
+      <div class="row">
+        <button onclick="return numberToParams(7)" class="key numeric">7</button>
+        <button onclick="return numberToParams(8)" class="key numeric">8</button>
+        <button onclick="return numberToParams(9)" class="key numeric">9</button>
+        <%= submit_tag"+", :name => "action", :value => "add", :type => 'submit', :class => "key function" %>
+      </div>
+      <div class="row">
+        <button onclick="return numberToParams(4)" class="key numeric">4</button>
+        <button onclick="return numberToParams(5)" class="key numeric">5</button>
+        <button onclick="return numberToParams(6)" class="key numeric">6</button>
+        <%= submit_tag"-", :name => "action", :value => "sub", :type => 'button', :class => "key function" %>
+      </div>
+      <div class="row">
+        <button onclick="return numberToParams(1)" class="key numeric">1</button>
+        <button onclick="return numberToParams(2)" class="key numeric">2</button>
+        <button onclick="return numberToParams(3)" class="key numeric">3</button>
+        <%= submit_tag"=", :name => "action", :value => "equ", :type => 'button', :class => "key function" %>
+      </div>
+      <div class="row">
+         <button onclick="return numberToParams(0)" class="key numeric">0</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

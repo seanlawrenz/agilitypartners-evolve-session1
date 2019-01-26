@@ -1,0 +1,28 @@
+<h1>Calc#second</h1>
+
+<div class="container">
+<a href="http://localhost:3000/calc/container" class="">Go Back</a>
+  <div class="calculator">
+    <div class="keys">
+      <input id="display" class="readout" type="readonly" value=<%= @result%> />
+      <div class="row">
+        <button onclick="return numberToParams(7)" class="key numeric">7</button>
+        <button onclick="return numberToParams(8)" class="key numeric">8</button>
+        <button onclick="return numberToParams(9)" class="key numeric">9</button>
+      </div>
+      <div class="row">
+        <button onclick="return numberToParams(4)" class="key numeric">4</button>
+        <button onclick="return numberToParams(5)" class="key numeric">5</button>
+        <button onclick="return numberToParams(6)" class="key numeric">6</button>
+      </div>
+      <div class="row">
+        <button onclick="return numberToParams(1)" class="key numeric">1</button>
+        <button onclick="return numberToParams(2)" class="key numeric">2</button>
+        <button onclick="return numberToParams(3)" class="key numeric">3</button>
+      </div>
+      <div class="row">
+         <button onclick="return numberToParams(0)" class="key numeric">0</button>
+      </div>
+    </div>
+  </div>
+</div>
